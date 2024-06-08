@@ -1,6 +1,13 @@
 # Pricha-Web-App
 Social Media Application 
 
+## Techs Used
+- Django
+- Html
+- Django
+- Ajax
+
+
 # To Setup Project In Local
 ## Create python env
 - python3 -m venv .venv
