@@ -27,4 +27,10 @@ Social Media Application
 
 
 ### Here I have attached the screenshot
-- ![Login Page](url)
+- ![Login Page](https://github.com/vijendrasaini1922/Pricha-Web-App/blob/main/project-screenshot/login.png)
+- ![Register Page](https://github.com/vijendrasaini1922/Pricha-Web-App/blob/main/project-screenshot/register.png)
+- ![My Post](https://github.com/vijendrasaini1922/Pricha-Web-App/blob/main/project-screenshot/my-post.png)
+- ![All Post](https://github.com/vijendrasaini1922/Pricha-Web-App/blob/main/project-screenshot/all-posts.png)
+- ![Create Post](https://github.com/vijendrasaini1922/Pricha-Web-App/blob/main/project-screenshot/create-post.png)
+- ![Edit Profile](https://github.com/vijendrasaini1922/Pricha-Web-App/blob/main/project-screenshot/edit-user-profile.png)
+- ![Change Password](https://github.com/vijendrasaini1922/Pricha-Web-App/blob/main/project-screenshot/change-password.png)
