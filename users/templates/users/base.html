@@ -1,0 +1,46 @@
+{% load static %}
+<html>
+  <head>
+    <link rel="stylesheet" href = "{% static 'users/styles.css' %}">
+    <link rel="stylesheet" href = "{% static 'users/style.css' %}">
+    <script src="https://code.jquery.com/jquery-3.6.1.js" integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI=" crossorigin="anonymous"></script> 
+  </head>
+
+  <body>
+    <nav class="shadow-lg max-h-16">
+      <div class="p-4 mx-auto">
+        <div class="flex justify-between">
+          <!-- Website Logo -->
+          <div>
+            <a class="flex gap-4" href = "">
+              <img class="h-8 w-8"  src="{% static 'users/images/logo.png' %}" alt="">
+              <span class="font-semibold text-2xl"> Pricha App</span>
+            </a>
+          </div>
+  
+          <!--Website Items-->
+          <div class="flex items-center space-x-8">
+            {% if request.user.is_authenticated %}
+            <a class="px-2 text-gray-500 text-xl font-semibold" href="{% url 'feed' %}">All Posts</a>
+            <a class="px-2 text-gray-500 text-xl font-semibold" href="{% url 'index' %}">Home</a>
+              <a class="px-2 text-gray-500 text-xl font-semibold" href="{% url 'create' %}">Create Post</a>
+              <a class="px-2 text-gray-500 text-xl font-semibold" href="{% url 'edit' %}">Edit Profile</a>
+              <a>
+              <form method="POST" action="{% url 'logout' %}" class="inline">
+                {% csrf_token %}
+                <button type="submit" class="px-2 text-gray-500 text-xl font-semibold cursor-pointer">Logout</button>
+              </form>
+            </a>
+            {% else %}
+              <a class="px-2 text-gray-500 text-xl font-semibold" href="{% url 'login' %}">Log In</a>
+              <a class="px-2 text-gray-500 text-xl font-semibold" href="{% url 'register' %}">Register</a>
+              {% endif %}
+          </div>
+        </div>
+      </div>
+    </nav>
+    
+    {% block body %}
+    {% endblock %}
+  </body>
+</html>

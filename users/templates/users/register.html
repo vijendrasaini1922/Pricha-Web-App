@@ -1,0 +1,36 @@
+{% extends 'users/base.html' %}
+{% block body %}
+<div class="flex items-center justify-center">
+  <div>
+    <h1 class="text-2xl m-10 text-center">👨🏻 <u>Register User</u></h1>
+    <div class="container py-5">
+      <form method="POST" class="bg-white shadow-md m-10 w-96 rounded px-8 pt-6 pb-8 mb-4">
+        {% csrf_token %}
+        <div class="mb-4">
+          <label class="block text-gray-700 text-sm font-bold mb-2" for="email">Email</label>
+          <input id="email" name="email" type="email" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" placeholder="Email">
+        </div>
+        <div class="mb-4">
+          <label class="block text-gray-700 text-sm font-bold mb-2" for="username">Username</label>
+          <input id="username" name="username" type="text" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" placeholder="Username">
+        </div>
+        <div class="mb-4">
+          <label class="block text-gray-700 text-sm font-bold mb-2" for="first_name">First Name</label>
+          <input id="first_name" name="first_name" type="text" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" placeholder="First Name">
+        </div>
+        <div class="mb-4">
+          <label class="block text-gray-700 text-sm font-bold mb-2" for="password">Password</label>
+          <input id="password" name="password" type="password" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" placeholder="Password">
+        </div>
+        <div class="mb-4">
+          <label class="block text-gray-700 text-sm font-bold mb-2" for="password2">Confirm Password</label>
+          <input id="password2" name="password2" type="password" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" placeholder="Confirm Password">
+        </div>
+        <button class="text-white bg-green-500 px-5 py-2 w-full rounded focus:outline-none focus:shadow-outline" type="submit">Register</button>
+      </form>
+    </div>
+    <p class="text-center"><a class="text-indigo-500" href="{% url 'password_reset' %}">Forgot password? Click here to reset</a></p>
+    <p class="text-center"><a class="text-green-500" href="{% url 'login' %}">Log In</a></p>
+  </div>
+</div>
+{% endblock %}
