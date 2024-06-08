@@ -1,5 +1,6 @@
 # Pricha-Web-App
 Social Media Application 
+- It has register, login, create post, like post, comment, change password, reset-password, all these functionalities apart from that restricted authorization setup.
 
 ## Techs Used
 - Django
@@ -22,3 +23,8 @@ Social Media Application
 
 ## run the code 
 - python manage.py runserver
+
+
+
+### Here I have attached the screenshot
+- ![Login Page](url)
